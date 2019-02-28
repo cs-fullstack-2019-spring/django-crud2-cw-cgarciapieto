@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<a href="{% url 'contacts' %}">Add New contact</a>
+{% for user in allcontacts %}
+
+<p> <a href = "{% url 'edit' edit.id%}">edit</a></p>
+<P>{{ user.name}}</P>
+<P>{{ user.email}}</P>
+<P>{{ user.phoneNumber}}</P>
+<P></P>
+{% endfor%}
+</body>
+</html>
